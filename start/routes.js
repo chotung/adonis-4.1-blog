@@ -17,3 +17,14 @@
 const Route = use('Route')
 
 Route.on('/').render('home')
+
+
+Route.get('/test', () => "hello world")
+
+Route.get('/test2', function(){
+  return "hello there"
+})
+
+Route.get('/test/:id', function( {params} ){
+  return `this is the id ${params.id}`
+})
